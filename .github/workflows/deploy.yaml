@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [main ]
+  
+jobs:
+ 
+  deploy-staging:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to dev
+        uses: appleboy/ssh-action@master
+        with:
+          username: ${{ secrets.SSH_USERNAME }}
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          password: ${{ secrets.SSH_PASSWORDD }}
+          script: 'cd /home/qxhdhehh/backup-gcp/merchantlist && pwd && sh server_deploy.sh'
