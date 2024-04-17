@@ -15,4 +15,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           password: ${{ secrets.SSH_PASSWORDD }}
-          script: 'cd /home/qxhdhehh/backup-gcp/merchantlist && pwd && sh server_deploy.sh'
+          script: 'cd /homez.523/bacalaocxf/ext.impacthero.co && pwd && sh server_deploy.sh'
+          
